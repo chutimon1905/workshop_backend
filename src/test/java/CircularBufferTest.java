@@ -72,4 +72,22 @@ public class CircularBufferTest {
         assertEquals("E", cb.readData());
 
     }
+
+    @Test
+    public void write_A_B_C_D_E_F_to_buffer_should_read_A_B_C_D_E_F_from_buffer(){
+        CircularBuffer cb= new CircularBuffer();
+        cb.writeData("A");
+        cb.writeData("B");
+        cb.writeData("C");
+        cb.writeData("D");
+        cb.writeData("E");
+        cb.writeData("F");
+        assertEquals("A", cb.readData());
+        assertEquals("B", cb.readData());
+        assertEquals("C", cb.readData());
+        assertEquals("D", cb.readData());
+        assertEquals("E", cb.readData());
+        assertEquals("F", cb.readData());
+
+    }
 }
