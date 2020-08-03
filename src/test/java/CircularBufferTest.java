@@ -22,7 +22,7 @@ public class CircularBufferTest {
     }
 
     @Test
-    public void write_A_to_buffer_should_read_A_B_from_buffer(){
+    public void write_A_B_to_buffer_should_read_A_B_from_buffer(){
         CircularBuffer cb= new CircularBuffer();
         cb.writeData("A");
         cb.writeData("B");
